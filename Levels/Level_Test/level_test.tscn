@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0t4vbgbtl4sc"]
+
+[ext_resource type="PackedScene" uid="uid://beccp4cpqakjh" path="res://Levels/Level_Test/lvl_1_bg.tscn" id="1_d71m0"]
+[ext_resource type="TileSet" uid="uid://ch26x7fv7jcvj" path="res://Levels/Level_Test/test_tile_set.tres" id="2_2oa3x"]
+[ext_resource type="PackedScene" uid="uid://yoouppj33c4j" path="res://Actors/player.tscn" id="3_msch3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k8031"]
+normal = Vector2(-1, 0)
+distance = -416.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_21qde"]
+normal = Vector2(1, 0)
+
+[node name="LevelTest" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_d71m0")]
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = ExtResource("2_2oa3x")
+format = 2
+layer_0/name = "Back_props"
+layer_0/modulate = Color(0.709804, 0.709804, 0.709804, 1)
+layer_1/name = "Stage"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(-131067, 65539, 0, -131072, 65539, 0, -131071, 65539, 0, -131070, 65539, 0, -131069, 65539, 0, -131068, 65539, 0, -131066, 65539, 0, -131065, 196611, 0, -131063, 65539, 0, -131062, 65539, 0, -65536, 65539, 1, -65535, 65539, 1, -65534, 65539, 1, -65533, 65539, 1, -65532, 65539, 1, -65531, 65539, 1, -65530, 65539, 1, -65529, 65539, 1, -65528, 65539, 1, -65527, 65539, 1, -65526, 65539, 1, -65525, 65539, 1, -65524, 65539, 1, -131060, 196611, 0, -131061, 65539, 0, -196600, 131075, 0, -196601, 3, 0, -131059, 262147, 0, -65523, 65539, 1, -65522, 65539, 1, -65521, 65539, 1, -65520, 65539, 1, -65519, 65539, 1, -65518, 65539, 1, -65517, 65539, 1, -65516, 65539, 1, -65515, 65539, 1, -65514, 65539, 1, -65513, 65539, 1, -65512, 65539, 1, -65511, 65539, 1, -65510, 65539, 1, -65509, 65539, 1, -65508, 65539, 1, -65507, 65539, 1, -65506, 65539, 1, -65505, 65539, 1, -65504, 65539, 1, -65503, 65539, 1, -65502, 65539, 1, -65501, 65539, 1, -65500, 65539, 1, -65499, 65539, 1, -65498, 65539, 1, -65497, 65539, 1, -131033, 65539, 0, -131034, 65539, 0, -131035, 65539, 0, -131036, 65539, 0, -131037, 65539, 0, -131038, 65539, 0, -131039, 65539, 0, -131040, 65539, 0, -131041, 65539, 0, -131043, 65539, 0, -131044, 65539, 0, -131042, 65539, 0, -131045, 65539, 0, -131046, 65539, 0, -131047, 65539, 0, -131048, 65539, 0, -131049, 65539, 0, -131050, 65539, 0, -131051, 65539, 0, -131052, 65539, 0, -131055, 65539, 0, -131056, 65539, 0, -131057, 65539, 0, -131058, 65539, 0, -196596, 3, 1, -262132, 3, 0, -262131, 131075, 0, -196595, 131075, 1, -131064, 262147, 0, 18, 65539, 1, 17, 65539, 1, 10, 65539, 1, 9, 65539, 1, 8, 65539, 1, 7, 65539, 1, -131054, 65539, 0, -131053, 65539, 0, -327663, 327683, 3, -327662, 393219, 3, -327661, 393219, 3, -327660, 393219, 3, -327659, 393219, 3, -327658, 393219, 3, -327657, 393219, 3, -327656, 393219, 3, -327655, 458755, 3, -262127, 327683, 4, -196591, 393219, 4, -196583, 393219, 4, -262119, 458755, 4, -196590, 393219, 4, -262126, 393219, 4, -262125, 393219, 4, -262124, 393219, 4, -196588, 393219, 4, -196589, 393219, 4, -262123, 393219, 4, -196586, 393219, 4, -196587, 393219, 4, -262122, 393219, 4, -262121, 393219, 4, -196585, 393219, 4, -196584, 393219, 4, -262120, 393219, 4, -458733, 327683, 3, -458732, 393219, 3, -458731, 393219, 3, -458730, 393219, 3, -458729, 458755, 3, -393193, 458755, 4, -393197, 327683, 4, -393196, 393219, 4, -393195, 393219, 4, -393194, 393219, 4)
+layer_2/name = "Front_props"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array()
+
+[node name="OutOfBounds" type="Node2D" parent="."]
+
+[node name="RightBound" type="StaticBody2D" parent="OutOfBounds"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBounds/RightBound"]
+shape = SubResource("WorldBoundaryShape2D_k8031")
+
+[node name="LeftBound" type="StaticBody2D" parent="OutOfBounds"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBounds/LeftBound"]
+shape = SubResource("WorldBoundaryShape2D_21qde")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("3_msch3")]
+position = Vector2(16, -32)

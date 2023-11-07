@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://beccp4cpqakjh"]
+
+[ext_resource type="Texture2D" uid="uid://cefqk22fi8d6y" path="res://Assets/FreeCuteTileset/BG1.png" id="1_wrwqw"]
+[ext_resource type="Texture2D" uid="uid://duqjt434lkiqm" path="res://Assets/FreeCuteTileset/BG2.png" id="2_wq0ls"]
+[ext_resource type="Texture2D" uid="uid://b1ulykmgggg2u" path="res://Assets/FreeCuteTileset/BG3.png" id="3_kcvm3"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_w6e8u"]
+center_offset = Vector3(0.5, 0.5, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_fxvct"]
+center_offset = Vector3(0.5, 0.5, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_whxho"]
+lightmap_size_hint = Vector2i(7, 7)
+center_offset = Vector3(0.5, 0.5, 0)
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+follow_viewport_enabled = true
+scroll_base_offset = Vector2(1, 1)
+scroll_limit_end = Vector2(100000, 100000)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.25, 1)
+motion_scale = Vector2(0, 0)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="ParallaxLayer"]
+texture_filter = 1
+scale = Vector2(160, -92)
+mesh = SubResource("QuadMesh_w6e8u")
+texture = ExtResource("1_wrwqw")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+texture_filter = 1
+texture_repeat = 2
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(160, 0)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="ParallaxLayer2"]
+texture_filter = 1
+scale = Vector2(160, -92)
+mesh = SubResource("QuadMesh_fxvct")
+texture = ExtResource("2_wq0ls")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+texture_filter = 1
+texture_repeat = 2
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(160, 0)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="ParallaxLayer3"]
+texture_filter = 1
+scale = Vector2(160, -92)
+mesh = SubResource("QuadMesh_whxho")
+texture = ExtResource("3_kcvm3")

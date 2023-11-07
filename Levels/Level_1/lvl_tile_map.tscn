@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct0m20ggvetfx"]
+
+[ext_resource type="TileSet" uid="uid://b70rd7f1832f1" path="res://Assets/TileSet.tres" id="1_d2rrw"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = ExtResource("1_d2rrw")
+format = 2
+layer_0/name = "Background"
+layer_1/name = "Stage"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Decor"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Objects"
+layer_3/enabled = true
+layer_3/modulate = Color(1, 1, 1, 1)
+layer_3/y_sort_enabled = false
+layer_3/y_sort_origin = 0
+layer_3/z_index = 0
+layer_3/tile_data = PackedInt32Array()
+layer_4/name = "Foreground"
+layer_4/enabled = true
+layer_4/modulate = Color(1, 1, 1, 1)
+layer_4/y_sort_enabled = false
+layer_4/y_sort_origin = 0
+layer_4/z_index = 0
+layer_4/tile_data = PackedInt32Array()

@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://yoouppj33c4j"]
+
+[ext_resource type="Script" path="res://Actors/platformer_controller.gd" id="1_61u7h"]
+[ext_resource type="SpriteFrames" uid="uid://swnbg7sny6vx" path="res://Sprites/knight_sprite_frames.tres" id="1_ridxd"]
+[ext_resource type="Script" path="res://Actors/animations.gd" id="3_cbf7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4pc3"]
+size = Vector2(10, 24)
+
+[node name="PlayerCharacter" type="CharacterBody2D"]
+script = ExtResource("1_61u7h")
+max_jump_height = 35.0
+min_jump_height = 15.0
+falling_gravity_multiplier = 2.0
+max_acceleration = 1500
+coyote_time = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_m4pc3")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("1_ridxd")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.865712
+centered = false
+offset = Vector2(-64, -64)
+script = ExtResource("3_cbf7q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_bottom = 0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="platformer_graphics_IMakeGames">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/platformer_graphics_IMakeGames.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
